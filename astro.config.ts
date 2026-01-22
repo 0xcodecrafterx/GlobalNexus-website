@@ -22,6 +22,9 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
+  devToolbar: {
+    enabled: false,
+  },
   output: 'static',
 
   integrations: [
